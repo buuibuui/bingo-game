@@ -1,0 +1,171 @@
+$cWhite: #ffffff;
+$cYellow: #f8cc2f;
+$cBlackGray: #2c2c2c;
+$cRed: #e00000;
+$cGreen: #03a305;
+$cGray: rgb(192, 191, 191);
+
+body {
+	margin: 0;
+	text-align: center;
+	background-color: $cYellow;
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.title {
+	font-family: 'Press Start 2P', cursive;
+	color: $cRed;
+	font-size: 2rem;
+	text-shadow: 3px 3px 0px $cWhite;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 20px;
+	max-width: 1000px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.left-container {
+	width: 48%;
+
+	&__btns {
+		display: flex;
+		flex-direction: column;
+	
+		& .btn {
+			display: inline-block;
+			box-sizing: border-box;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			margin: 15px 0;
+			width: 100%;
+			background-color: #04c706;
+			border: outset 6px $cGreen;
+			outline: none;
+			font-size: 18px;
+			color: $cWhite;
+			font-family: 'Press Start 2P', cursive;
+			cursor: pointer;
+			
+			&:disabled {
+				background-color: rgb(172, 172, 172);
+				color: $cWhite;
+				border: inset 6px $cGray;
+			}
+		}
+	}
+
+	&__roulette {
+		display: flex;
+		justify-content: center;
+		align-items: center;   
+		box-sizing: border-box;
+		margin: 15px auto;
+		width: 200px;
+		height: 120px;
+		background-color: $cWhite;
+		border: solid 6px $cRed;
+		border-radius: 50%;
+		font-size: 42px;
+		font-family: 'Press Start 2P', cursive;
+		color: $cRed;
+	}
+
+	&__history {
+		box-sizing: border-box;
+		padding: 20px;
+		width: 100%;
+		height: 180px;
+		background-color: $cBlackGray;
+		border: solid 3px $cWhite;
+		
+		& h2 {
+			margin: 0;
+			text-align: left;
+			font-family: 'Press Start 2P', cursive;
+			font-size: 18px;
+			color: $cWhite;
+		}
+		
+		& ul {
+			margin: 0 auto;
+			padding: 10px 0 0 0;
+			font-family: 'Press Start 2P', cursive;
+			color: $cWhite;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			
+			& li {
+				width: 12%;
+				font-size: 0.8rem;
+				line-height: 1.5rem;
+			}
+		}
+	}
+}
+
+.card-container {
+	width: 48%;
+	height: 600px;
+	background-color: $cWhite;
+	box-shadow: 9px 9px 0px $cBlackGray;
+	
+	& h2 {
+		margin: 35px auto;
+		padding-left: 0.7em;
+		font-family: 'Press Start 2P', cursive;
+		font-size: 35px;
+		color: $cBlackGray;
+		letter-spacing: 0.7em;
+	}
+
+	& #card {
+		margin: 20px;
+		width: 90%;
+		display: flex;
+		flex-wrap: wrap;
+
+		& .cell {
+			box-sizing: border-box;
+			width: 20%;
+			background-color: $cWhite;
+			border: solid 3px $cGray;
+			position: relative;
+			
+			&::before {
+				content: '';
+				display: block;
+				padding-top: 100%;
+			}
+			
+			& .cell-inner {
+				font-family: 'Press Start 2P', cursive;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				font-size: 1.2rem;
+				color: $cBlackGray;
+			}
+	
+			&.opened {
+				background-color: $cRed;
+				& .cell-inner {
+					color: $cWhite;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  text-align: center;
+  background-color: #f8cc2f;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.title {
+  font-family: 'Press Start 2P', cursive;
+  color: #e00000;
+  font-size: 2rem;
+  text-shadow: 3px 3px 0px #ffffff;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-container {
+  width: 48%;
+}
+
+.left-container__btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-container__btns .btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 15px 0;
+  width: 100%;
+  background-color: #04c706;
+  border: outset 6px #03a305;
+  outline: none;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+}
+
+.left-container__btns .btn:disabled {
+  background-color: #acacac;
+  color: #ffffff;
+  border: inset 6px #c0bfbf;
+}
+
+.left-container__roulette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 15px auto;
+  width: 200px;
+  height: 120px;
+  background-color: #ffffff;
+  border: solid 6px #e00000;
+  border-radius: 50%;
+  font-size: 42px;
+  font-family: 'Press Start 2P', cursive;
+  color: #e00000;
+}
+
+.left-container__history {
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+  height: 180px;
+  background-color: #2c2c2c;
+  border: solid 3px #ffffff;
+}
+
+.left-container__history h2 {
+  margin: 0;
+  text-align: left;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.left-container__history ul {
+  margin: 0 auto;
+  padding: 10px 0 0 0;
+  font-family: 'Press Start 2P', cursive;
+  color: #ffffff;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-container__history ul li {
+  width: 12%;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+
+.card-container {
+  width: 48%;
+  height: 600px;
+  background-color: #ffffff;
+  box-shadow: 9px 9px 0px #2c2c2c;
+}
+
+.card-container h2 {
+  margin: 35px auto;
+  padding-left: 0.7em;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 35px;
+  color: #2c2c2c;
+  letter-spacing: 0.7em;
+}
+
+.card-container #card {
+  margin: 20px;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container #card .cell {
+  box-sizing: border-box;
+  width: 20%;
+  background-color: #ffffff;
+  border: solid 3px #c0bfbf;
+  position: relative;
+}
+
+.card-container #card .cell::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.card-container #card .cell .cell-inner {
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  color: #2c2c2c;
+}
+
+.card-container #card .cell.opened {
+  background-color: #e00000;
+}
+
+.card-container #card .cell.opened .cell-inner {
+  color: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */
